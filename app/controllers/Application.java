@@ -22,7 +22,7 @@ public class Application extends Controller {
       return ok(index.render("Your new application is ready."));
   }
 
-  public static Result hoge() {
+  public static Result play-test-app() {
     JsonNode json = request().body().asJson();
     ObjectNode result = Json.newObject();
     String name = json.findPath("name").textValue();

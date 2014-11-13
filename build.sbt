@@ -1,4 +1,4 @@
-name := "hoge"
+name := "play-test-app"
 
 version := "1.0-SNAPSHOT"
 

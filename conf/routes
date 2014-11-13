@@ -4,7 +4,7 @@
 
 # Home page
 GET     /                           controllers.Application.index()
-POST    /hoge                       controllers.Application.hoge()
+POST    /play-test-app              controllers.Application.play-test-app()
 GET     /ip                         controllers.Application.ip()
 
 # Map static resources from the /public folder to the /assets URL path
