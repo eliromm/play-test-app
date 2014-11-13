@@ -22,21 +22,6 @@ public class Application extends Controller {
       return ok(index.render("Your new application is ready."));
   }
 
-  public static Result play-test-app() {
-    JsonNode json = request().body().asJson();
-    ObjectNode result = Json.newObject();
-    String name = json.findPath("name").textValue();
-    if(name == null) {
-      result.put("status", "KO");
-      result.put("message", "Missing parameter [name]");
-      return badRequest(result);
-    } else {
-      result.put("status", "OK");
-      result.put("message", "Hello " + name);
-      return ok(result);
-    }
-  }
-
   public static Result ip() {
     ObjectNode result = Json.newObject();
     Request req = play.mvc.Http.Context.current().request();
