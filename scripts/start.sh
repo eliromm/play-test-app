@@ -1,2 +1,2 @@
-rm -rf /home/play-app/prod/*
+cd /home/play-app/
 play start
