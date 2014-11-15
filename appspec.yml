@@ -2,6 +2,8 @@ files:
   - source: /home/play-app
     destination: /home/play-app/prod/
 hooks:
+  BeforeInstall:
+  Install:
   ApplicationStart:
     - location: bin/start.sh
       timeout: 300
