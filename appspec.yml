@@ -2,13 +2,17 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/play-app/
+    destination: /home/play-app/prod
 hooks:
   BeforeInstall:
     - location: scripts/cleanup.sh
       timeout: 300
-      runas: root
+      runas: play-app
+  Install:
+    - location: scripts/install.sh
+      timeout: 300
+      runas: play-app
   ApplicationStart:
     - location: scripts/start.sh
       timeout: 300
-      runas: root
+      runas: play-app
