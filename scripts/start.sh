@@ -1,2 +1,1 @@
-cd /home/play-app/prod
-./target/universal/stage/bin/play-test-app &
+/home/play-app/prod/target/universal/stage/bin/play-test-app
