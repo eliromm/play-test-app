@@ -1,16 +1,16 @@
 files:
-  - source: /home/play-app
-    destination: /home/play-app/prod/
+  - source: /
+    destination: /home/play-app/
 hooks:
   BeforeInstall:
-    - location: bin/cleanup.sh
+    - location: scripts/cleanup.sh
       timeout: 300
       runas: play-app
   ApplicationStart:
-    - location: bin/start.sh
+    - location: scripts/start.sh
       timeout: 300
       runas: play-app
   ApplicationStop:
-    - location: bin/stop.sh
+    - location: scripts/stop.sh
       timeout: 300
       runas: play-app
