@@ -3,7 +3,9 @@ files:
     destination: /home/play-app/prod/
 hooks:
   BeforeInstall:
-  Install:
+    - location: bin/cleanup.sh
+      timeout: 300
+      runas: play-app
   ApplicationStart:
     - location: bin/start.sh
       timeout: 300
