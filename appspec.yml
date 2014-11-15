@@ -1,0 +1,12 @@
+files:
+  - source: /home/play-app
+    destination: /home/play-app/prod/
+hooks:
+  ApplicationStart:
+    - location: bin/start.sh
+      timeout: 300
+      runas: play-app
+  ApplicationStop:
+    - location: bin/stop.sh
+      timeout: 300
+      runas: play-app
