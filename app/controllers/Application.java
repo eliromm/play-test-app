@@ -41,7 +41,7 @@ public class Application extends Controller {
     data.put("user-agent", ua );
     data.put("remote_address", r );
     //
-    LOG.log("remote-test", data);
+    LOG.log("remote-test", data, System.currentTimeMillis());
     return ok(result);
   }
 }
