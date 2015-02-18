@@ -19,7 +19,7 @@ public class Application extends Controller {
   private static final FluentLogger LOG = FluentLogger.getLogger("app","127.0.0.1", 24224);
 
   public static Result index() {
-      Logger.debug("debug index access")
+      Logger.debug("debug index access");
       return ok(index.render("Your new application is ready."));
   }
 
@@ -43,7 +43,7 @@ public class Application extends Controller {
     data.put("remote_address", r );
     //
     //LOG.log("remote-test", data, System.currentTimeMillis()); 時刻表示に注意
-    Logger.debug("debug ip access")
+    Logger.debug("debug ip access");
     LOG.log("remote-test", data, System.currentTimeMillis());
     return ok(result);
   }
