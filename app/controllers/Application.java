@@ -16,11 +16,10 @@ import play.mvc.Http.Request;
 import views.html.*;
 
 public class Application extends Controller {
-  private static final Logger LOGGER = LoggerFactory.getLogger(LogOutputTest.class);
   private static final FluentLogger LOG = FluentLogger.getLogger("app","127.0.0.1", 24224);
 
   public static Result index() {
-      LOGGER.debug("debug index access");
+      Logger.debug("debug");
       return ok(index.render("Your new application is ready."));
   }
 
@@ -44,7 +43,7 @@ public class Application extends Controller {
     data.put("remote_address", r );
     //
     //LOG.log("remote-test", data, System.currentTimeMillis()); 時刻表示に注意
-    LOGGER.debug("debug ip access");
+    Logger.debug("debug");
     LOG.log("remote-test", data, System.currentTimeMillis());
     return ok(result);
   }
