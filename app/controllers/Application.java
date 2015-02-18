@@ -10,7 +10,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 import play.*;
 import play.mvc.*;
-import play.api.Logger;
+//import play.api.Logger;
+import play.Logger;
 import play.mvc.Http.Request;
 
 import views.html.*;
@@ -19,7 +20,7 @@ public class Application extends Controller {
   private static final FluentLogger LOG = FluentLogger.getLogger("app","127.0.0.1", 24224);
 
   public static Result index() {
-      //Logger.info("debug");
+      Logger.info("debug");
       return ok(index.render("Your new application is ready."));
   }
 
@@ -43,7 +44,7 @@ public class Application extends Controller {
     data.put("remote_address", r );
     //
     //LOG.log("remote-test", data, System.currentTimeMillis()); 時刻表示に注意
-    //Logger.info("debug");
+    Logger.info("debug");
     LOG.log("remote-test", data, System.currentTimeMillis());
     return ok(result);
   }
