@@ -3,3 +3,8 @@ deployment:
     branch: master
     heroku:
       appname: hoge-play-test
+
+notify:
+  webhooks:
+    # A list of hook hashes, containing the url field
+    - https://api.loader.io/v2/tests/ef457967d3c94cab0f3b540d89465dcd/token/e6582beb8be18d26a19bb674725b10a2/run
