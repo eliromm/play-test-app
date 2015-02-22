@@ -2,4 +2,4 @@ deployment:
   staging:
     branch: master
     heroku:
-      appname: play-test-app-inokappa
+      appname: hoge-play-test
