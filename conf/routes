@@ -8,3 +8,4 @@ GET     /ip                         controllers.Application.ip()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /loaderio-943f99103118c36895e30d04a996e3cc.txt controllers.Assets.at(path="/public", file="loaderio-943f99103118c36895e30d04a996e3cc.txt")
